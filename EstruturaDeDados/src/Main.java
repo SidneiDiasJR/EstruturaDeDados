@@ -1,37 +1,31 @@
-import ArmazenamentoSequencial.*;
+import ListaLigada.ListaLigada;
 
 public class Main {
 	public static void main(String[] args) {
-		Aluno a1 = new Aluno("Klee");
-		Aluno a2 = new Aluno("Sayu");
-		Aluno a3 = new Aluno("Diona");
-		Aluno a4 = new Aluno("Qiqi");
-		Vetor lista = new Vetor();
-
-		lista.adiciona(a1);
-		lista.adiciona(a2);
-		lista.adiciona(a3);
-
-		System.out.println(a1 + " está na lista? " + lista.contem(a1));
-		System.out.println(lista);
-		System.out.println("Quantidade de Alunos: " + lista.tamanho());
-
-		lista.adiciona(0, a4);
-		System.out.println("\n" + lista);
-		System.out.println("Quantidade de Alunos: " + lista.tamanho());
-
-		lista.remove(1);
-		System.out.println("\n" + a1 + " está na lista? " + lista.contem(a1));
-		System.out.println(lista);
-		System.out.println("Quantidade de Alunos: " + lista.tamanho());
-
-		for (int i = lista.tamanho(); i < 400; i++)
-			lista.adiciona(new Aluno("Childe" + i));
+		ListaLigada lista = new ListaLigada();
 		
 		System.out.println(lista);
-		System.out.println("Quantidade de Alunos: " + lista.tamanho());
-		lista.adiciona(5,new Aluno("Tartaglia"));
+		lista.adicionaNoComeco("Ganyu");
 		System.out.println(lista);
-		System.out.println("Quantidade de Alunos: " + lista.tamanho());
+		lista.adicionaNoComeco("Xiao");
+		System.out.println(lista);
+		lista.adiciona("Yanfei");
+		System.out.println(lista);
+		lista.adiciona(1,"Pervases");
+		System.out.println(lista);
+		lista.adiciona(4,"Azhdaha");
+		System.out.println(lista);
+		lista.adiciona(0,"Guoba");
+		System.out.println(lista);
+		System.out.println(lista.tamanho());
+		//lista.adiciona(7,"Mountain Shaper");
+		Object msg = lista.pega(2);
+		System.out.println(msg);
+		lista.removeDoComeco();
+		System.out.println(lista);
+		System.out.println(lista.contem("Guoba"));
+		System.out.println(lista.contem("Ganyu"));
+		lista.remove(2);
+		System.out.println(lista);
 	}
 }
