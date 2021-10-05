@@ -115,6 +115,10 @@ public class ListaLigada {
 	public boolean posicaoOcupada(int posicao) {
 		return posicao >= 0 && posicao < tamanho();
 	}
+	
+	public Celula getUltima() {
+		return this.ultima;
+	}
 
 	@Override
 	public String toString() {

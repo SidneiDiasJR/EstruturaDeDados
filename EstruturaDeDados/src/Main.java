@@ -1,15 +1,13 @@
-import ListaLigada.ListaLigada;
+import Pilha.Pilha;
 
 public class Main {
 	public static void main(String[] args) {
-		ListaLigada lista = new ListaLigada();
+		Pilha pilha = new Pilha();
 		
-		lista.adiciona("Barbatos");
-		lista.adiciona("Morax");
-		lista.adiciona("Baal");
-		lista.adiciona("Belzebul");
-		System.out.println(lista);
-		lista.remove(2);
-		System.out.println(lista);
+
+		pilha.push("Xiao");
+		System.out.println(pilha);
+		System.out.println(pilha.pop());
+		System.out.println(pilha);
 	}
 }
