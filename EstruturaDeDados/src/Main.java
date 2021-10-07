@@ -1,13 +1,17 @@
-import Pilha.Pilha;
+import Fila.Fila;
 
 public class Main {
 	public static void main(String[] args) {
-		Pilha pilha = new Pilha();
+		Fila fila = new Fila();
 		
-
-		pilha.push("Xiao");
-		System.out.println(pilha);
-		System.out.println(pilha.pop());
-		System.out.println(pilha);
+		fila.adicionar("Jean");
+		fila.adicionar("Kaeya");
+		fila.adicionar("Diluc");
+		fila.adicionar("Lisa");
+		fila.adicionar("Klee");
+		System.out.println(fila);
+		System.out.println(fila.proximo());
+		System.out.println(fila.estaVazia());
+		System.out.println(fila);
 	}
 }

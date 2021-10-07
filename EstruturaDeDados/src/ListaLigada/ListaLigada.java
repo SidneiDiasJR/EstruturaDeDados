@@ -120,6 +120,10 @@ public class ListaLigada {
 		return this.ultima;
 	}
 
+	public Celula getPrimeira() {
+		return this.primeira;
+	}
+	
 	@Override
 	public String toString() {
 		if (tamanho() == 0)
