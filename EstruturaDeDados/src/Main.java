@@ -1,17 +1,19 @@
-import Fila.Fila;
+import Conjunto.Conjunto;
 
 public class Main {
 	public static void main(String[] args) {
-		Fila fila = new Fila();
+		Conjunto conjunto = new Conjunto();
 		
-		fila.adicionar("Jean");
-		fila.adicionar("Kaeya");
-		fila.adicionar("Diluc");
-		fila.adicionar("Lisa");
-		fila.adicionar("Klee");
-		System.out.println(fila);
-		System.out.println(fila.proximo());
-		System.out.println(fila.estaVazia());
-		System.out.println(fila);
+		conjunto.adiciona("Jean");
+		conjunto.adiciona("Jean");
+		conjunto.adiciona("Kaeya");
+		conjunto.adiciona("Diluc");
+		conjunto.adiciona("Lisa");
+		conjunto.adiciona("Noelle");
+		conjunto.adiciona("Eula");
+		conjunto.adiciona("Klee");
+		System.out.println(conjunto);
+		conjunto.remove("Klee");
+		System.out.println(conjunto);
 	}
 }

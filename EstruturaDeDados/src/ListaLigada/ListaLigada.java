@@ -97,6 +97,15 @@ public class ListaLigada {
 			this.totalElementos--;
 		}
 	}
+	
+	public void remove(Object elemento) {
+		Celula atual = primeira;
+		for (int i = 0; i < tamanho(); i++) {
+			if(atual.getElemento() == elemento)
+				remove(i);
+			atual = atual.getProximo();
+		}
+	}
 
 	public int tamanho() {
 		return this.totalElementos;
